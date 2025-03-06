@@ -15,48 +15,67 @@ CrushAI is a **GenAI-based Virtual Crush Chatbot** that lets users experience fu
 
 ## Tech Stack 🔥
 
-- **Frontend:** Flutter (Material UI)
+- **Frontend:** Flutter (Material UI - Web Only)
 - **Backend:** Python Flask API
 - **AI Model:** Gemini AI
+
+## Folder Structure 📁
+```
+Ai-ChatBot/
+│
+├─ app/                   # Flutter App Folder
+│   ├─ main.dart          # Main Flutter App Code
+│   └─ ...
+│
+├─ requirements.txt       # Backend Dependencies
+└─ README.md             # Documentation
+```
 
 ## Installation ⚙️
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/johanjoseph29/Ai_chatbot.git
-   cd crushai
+   git clone https://github.com/johanjoseph29/Ai-ChatBot.git
+   cd Ai-ChatBot
    ```
+
 2. Install Dependencies:
    ```bash
+   cd app
    flutter pub get
    ```
-3. Run the app:
+   **Flutter Dependencies:**
+   ```yaml
+   dependencies:
+     http: ^0.13.6
+     google_generative_ai: ^0.3.0
+     provider: ^6.0.5
+   ```
+
+3. Run the app (Web Only):
    ```bash
-   flutter run
+   flutter run -d chrome
    ```
 
 ### Backend Setup
 
-1. Navigate to the backend folder:
-   ```bash
-   cd backend
-   ```
-2. Install Python dependencies:
+1. Install Python dependencies:
    ```bash
    pip install -r requirements.txt
    ```
    
 **requirements.txt:**
 ```plaintext
-Flask==2.3.3
-Flask-Cors==3.0.10
-google-generativeai==0.2.2
-textblob==0.17.1
+Flask==3.0.0
+Flask-Cors==4.0.0
+requests==2.31.0
+google-generativeai==0.4.1
+textblob==0.18.0
 ```
 
-3. Run Flask API:
+2. Run Flask API:
    ```bash
-   python app.py
+   python app/api.py
    ```
    API URL: `http://127.0.0.1:5000/chat`
 
@@ -69,6 +88,10 @@ textblob==0.17.1
 5. Enjoy mood swings, emotional talks, and funny replies.
 6. The app automatically stores the **last 10 messages** to maintain chat continuity.
 7. Use the settings to customize personality preferences.
+
+## App Preview 📸
+
+<img src="assets/gifmaker_me(1).gif" alt="CrushAI Preview" width="600"/>
 
 ## Upcoming Features 🚀
 
@@ -92,6 +115,4 @@ Feel free to fork the repository and make a Pull Request.
 This project is licensed under the MIT License.
 
 ---
-
-
 
